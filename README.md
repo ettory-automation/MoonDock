@@ -55,7 +55,47 @@ cd MoonDock
 
 2. Setup Environment: Edit .env with your Discord Webhook.
 
-3. Running Tests:
+3. Running as a System Service (Recommended):
+
+To ensure MoonDock remains independent of the Docker Daemon state, it is recommended to run it as a system service. This allows the agent to alert even if the Docker Engine crashes.
+
+- Create a Virtual Environment:
+
+```bash
+python3 -m venv venv
+source venv/bin/activate
+pip install -r requirements.txt
+```
+
+- Setup Systemd Service: Create a file at `/etc/systemd/system/moondock.service`:
+
+```ini
+[Unit]
+Description=MoonDock - Docker Event Watcher
+After=network.target
+
+[Service]
+Type=simple
+User=your-user
+WorkingDirectory=/path/to/moondock
+EnvironmentFile=/path/to/moondock/.env
+ExecStart=/path/to/moondock/venv/bin/python main.py
+Restart=always
+RestartSec=5
+
+[Install]
+WantedBy=multi-user.target
+```
+
+- Enable and Start:
+
+```bash
+sudo systemctl daemon-reload
+sudo systemctl enable moondock
+sudo systemctl start moondock
+```
+
+4. Running Tests:
 
 ```bash
 pytest
