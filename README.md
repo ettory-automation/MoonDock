@@ -53,7 +53,7 @@ git clone https://github.com/ettory-automation/MoonDock.git
 cd MoonDock
 ```
 
-2. Setup Environment: Copy .env.example for .env:
+2. Setup Environment: Copy `.env.example` for real `.env`:
 
 ```bash
 cp .env.example .env
