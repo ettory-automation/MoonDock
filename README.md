@@ -67,6 +67,12 @@ source venv/bin/activate
 pip install -r requirements.txt
 ```
 
+- Running Tests:
+
+```bash
+pytest -q
+```
+
 - Setup Systemd Service: Create a file at `/etc/systemd/system/moondock.service`:
 
 ```ini
@@ -79,6 +85,7 @@ Type=simple
 User=your-user
 WorkingDirectory=/path/to/moondock
 EnvironmentFile=/path/to/moondock/.env
+ExecStartPre=/path/to/moondock/venv/bin/pytest -q
 ExecStart=/path/to/moondock/venv/bin/python main.py
 Restart=always
 RestartSec=5
@@ -93,12 +100,6 @@ WantedBy=multi-user.target
 sudo systemctl daemon-reload
 sudo systemctl enable moondock
 sudo systemctl start moondock
-```
-
-4. Running Tests:
-
-```bash
-pytest
 ```
 
 ## 🧪 Project Structure
