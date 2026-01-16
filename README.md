@@ -53,9 +53,15 @@ git clone https://github.com/ettory-automation/MoonDock.git
 cd MoonDock
 ```
 
-2. Setup Environment: Edit .env with your Discord Webhook.
+2. Setup Environment: Copy .env.example for .env:
 
-3. Running as a System Service (Recommended):
+```bash
+cp .env.example .env
+```
+
+And edit .env with your Discord Webhook.
+
+4. Running as a System Service (Recommended):
 
 To ensure MoonDock remains independent of the Docker Daemon state, it is recommended to run it as a system service. This allows the agent to alert even if the Docker Engine crashes.
 
