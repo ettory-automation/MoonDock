@@ -1,5 +1,17 @@
 # MoonDock 🌕🐳
 
+<br>
+
+<p align="center">
+    <img src='https://raw.githubusercontent.com/ettory-automation/skill-icons/main/icons/Discord.svg' width='60' />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    <img src='https://raw.githubusercontent.com/ettory-automation/skill-icons/main/icons/Docker.svg' width='60' />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    <img src='https://raw.githubusercontent.com/ettory-automation/skill-icons/main/icons/Python-Dark.svg' width='60' />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    <img src='https://raw.githubusercontent.com/ettory-automation/devicon/master/icons/pytest/pytest-original-wordmark.svg' width='70' height='200' />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    
+</p>
+
+<br>
+
 MoonDock is a lightweight, event-driven monitoring agent designed to observe Docker Engine events and dispatch real-time, formatted alerts to Discord. Built with resilience in mind, it ensures you never miss a container failure, OOM kill, or health status change.
 
 ## 🚀 Key Features
