@@ -1,4 +1,4 @@
-# MoonDock 🌕🐳
+# 🌕🐳 MoonDock 
 
 <br>
 
@@ -14,6 +14,8 @@
 
 MoonDock is a lightweight, event-driven monitoring agent designed to observe Docker Engine events and dispatch real-time, formatted alerts to Discord. Built with resilience in mind, it ensures you never miss a container failure, OOM kill, or health status change.
 
+<br>
+
 ## 🚀 Key Features
 
 - Real-time Event Watcher: Utilizes the Docker Engine API to stream events with low overhead.
@@ -28,6 +30,8 @@ MoonDock is a lightweight, event-driven monitoring agent designed to observe Doc
 
 - Highly Configurable: 100% environment-variable driven for easy deployment in CI/CD pipelines.
 
+<br>
+
 ## 🛠️ Tech Stack
 
 Language: Python 3.10+
@@ -36,6 +40,8 @@ Libraries: docker-py, requests, python-dotenv, colorama.
 
 Testing: pytest with unittest.mock for infrastructure simulation.
 
+<br>
+
 ## 📋 Prerequisites
 
 1. Docker Engine installed and running.
@@ -43,6 +49,8 @@ Testing: pytest with unittest.mock for infrastructure simulation.
 2. A Discord Webhook URL.
 
 3. Python 3.10+ (if running bare-metal).
+
+<br>
 
 ## ⚙️ Configuration
 
@@ -55,6 +63,8 @@ Define your variables in the .env file present in the root of this repository, u
 | DOCKER_TLS_VERIFY | Enable TLS for TCP connections |
 | DOCKER_CERT_PATH | Path to TLS certificates |
 | LOG_LEVEL | Logging verbosity (DEBUG, INFO, ERROR) |
+
+<br>
 
 ## 📦 Installation & Usage
 
@@ -120,6 +130,8 @@ sudo systemctl enable moondock
 sudo systemctl start moondock
 ```
 
+<br>
+
 ## 🧪 Project Structure
 
 - moondock/clients/: Connectivity logic for Docker and Discord.
@@ -129,6 +141,8 @@ sudo systemctl start moondock
 - moondock/logger.py: Tailored logging with terminal colors for better debugging.
 
 - tests/: Comprehensive test suite using mocks to ensure parser and watcher reliability.
+
+<br>
 
 ## 🛡️ Safety & Security
 
